@@ -1,0 +1,30 @@
+Oppgave: Grunnleggande HTML
+Alle skal gjere fylgjande:
+Side 1 (index.html)
+ - Opprett ei fil som du kallar “index.html” i programmet du bruker (anbefalt Visual Studio Code).
+ - Tittelen (title) i nettlesaren skal settast til fritt valt tekst (eksempelvis ”Min hjemmeside”).
+ - Lag ei overskrift med eit fritt valgt tema og innhald, men som oppfyller krava under.
+ - Ha eit beskrivande bilete som passar saman med temaet, og la det ha ein alternativ tekst for dei som har slått av biletvisning.
+ - Skriv litt om temaet, med bruk av fleire paragrafer.
+ - Bruk forskjellig formatering, som feit og kursiv skrift etc. NB: Du treng ikkje bruke stilark i første omgang.
+ - Ha ei lenke ein eller annan plass i teksten som fører brukaren til ei ekstern side som seier meir om temaet. Denne skal opne seg i eit nytt vindu.
+ - Ha ei lenke til di eiga e-post-adresse ein stad i dokumentet.
+ - Bruk nummererte og unummererte lister for å liste opp litt informasjon.
+ - Bruk tabellar for å organisere noko av innhaldet.
+ - Gå til www.youtube.com (eller liknande) og finn ein video du ynskjer å bruke på sida di. Sjå på koden som ligg under “Innbygg” eller "Embed"; gjer eventuelle tilpassingar og kopier og lim denne inn ein valfri plass.
+ - Lag ei lenke "på biletet" (dersom du trykker på biletet kjem du til ein fritt valgt nettstad).
+Side 2
+ - Opprett ei ny fil som du kallar (for eksempel) “side2.html”.
+ - Frå index.html, lag ei lenke til side2.html.
+ - Vel fritt innhald på side2.html, men ha ei lenke tilbake til index.html.
+ - Tilleggsoppgaver
+Stilark:
+ - Koble til eit eksternt stilark, både startsida og side 2.
+ - Legg til ein bakgrunnsfarge for heile nettsida.
+ - Endre fargen på h1 og p. Vel noko som er lett å lese. Korriger størrelse og font etter behov.
+ - Legg til meir etter behov/
+
+Alle skal i tillegg gjere fylgjande tilleggsoppgåver:
+Sjekk om koden er korrekt på W3C Validator, og korriger etter behov.
+Generelt
+NB! Koden skal vere oversikteleg, og fylgje standarder. Dette inkluderer òg inndeling av dokumentet (html, header, body).

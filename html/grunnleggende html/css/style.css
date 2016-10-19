@@ -1,0 +1,29 @@
+#pandaImg {
+  height: 300px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+
+
+body {
+  background-color: #333;
+}
+
+h1 {
+  color: yellow;
+}
+
+p, a, i, b, td, th, li {
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(even) td {
+  color: black;
+}
