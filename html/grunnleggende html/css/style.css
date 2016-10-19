@@ -1,5 +1,7 @@
 #pandaImg {
-  height: 300px;
+    height: 300px;
+    float: left;
+    margin: 2%;
 }
 
 table, th, td {
@@ -10,10 +12,22 @@ table, th, td {
 
 body {
   background-color: #333;
+    min-width: 300px;
+}
+
+main {
+    margin: auto;
+    max-width: 800px;
+    min-width: 300px;
+    padding: 2%;
+    background-color: #666;
+    
 }
 
 h1 {
   color: yellow;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 p, a, i, b, td, th, li {
@@ -26,4 +40,10 @@ tr:nth-child(even) {
 
 tr:nth-child(even) td {
   color: black;
+}
+
+
+
+.textbox {
+    float: left;
 }

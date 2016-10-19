@@ -1,0 +1,89 @@
+<!doctype HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Clock</title>
+    
+    <style>
+        body {
+            background-color: gray;
+            padding: 0;
+            margin: 0;
+            color: #
+        }
+        .center {
+            margin-top: 40vh;
+            text-align: center;
+            font-size: 10vh;
+        }
+    </style>
+    <script type="text/javascript">
+        function startTime() {
+            var time = new Date();
+            var h = time.getHours();
+            var m = time.getMinutes();
+            var s = time.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('clock').innerHTML = h + ':' + m + ':' + s;
+            document.body.style.backgroundColor = changeColor(s);
+            var t = setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                return '0' + i;
+            }
+            return i;
+        }
+        
+        function changeColor(s) {
+            var r = 0;
+            var g = 0;
+            var b = 0;
+            if (s < 10) {
+                var r = 255;
+                var g = 0;
+                var b = 0;
+                g = s*25
+            } else if (s < 20) {
+                var r = 255;
+                var g = 255;
+                var b = 0;
+                r = r - (s-10)*25;
+            } else if (s < 30){
+                var r = 0;
+                var g = 255;
+                var b = 0;
+                b = (s-20)*25;
+            } else if (s < 40){
+                var r = 0;
+                var g = 255;
+                var b = 255;
+                g = g-(s-30)*25;
+            } else if (s < 50){
+                var r = 0;
+                var g = 0;
+                var b = 255;
+                r = (s-40)*25;
+            } else if (s < 60){
+                var r = 255;
+                var g = 0;
+                var b = 255;
+                b = b-(s-50)*25;
+            }
+            return 'rgb('+r+','+g+','+b+')';
+        }
+
+    </script>
+
+</head>
+    
+<body onload="startTime()">
+    <div class="center">
+        <h1 id="clock">This should be a clock....</h1>
+    </div>
+    
+</body>
+</html>

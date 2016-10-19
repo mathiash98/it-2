@@ -1,52 +1,83 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Oppgave 1</title>
     <link rel="stylesheet" href="./css/style.css" media="screen">
-  </head>
-  <body>
+
+    <script type="text/javascript">
+        function startTime() {
+            var time = new Date();
+            var h = time.getHours();
+            var m = time.getMinutes();
+            var s = time.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('clock').innerHTML = h + ':' + m + ':' + s;
+            var t = setTimeout(startTime, 1000);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                return '0' + i;
+            }
+            return i;
+        }
+
+    </script>
+
+</head>
+
+<body onload="startTime()">
     <header>
-      <a href="./side2.html">Side2</a>
+        <a href="./side2.html">Side2</a>
+        <a href="./clock.html">Clock</a>
     </header>
 
-    <h1>This is a panda</h1>
-    <a href="http://wwf.panda.org/"><img id="pandaImg" src="./img/panda.svg" alt="Panda"/></a>
-    <ol>
-      <li><p>This panda's name is Bob.</p></li>
-      <li><i>Bob likes to be happy.</i></li>
-      <li><a href="http://freehugsproject.com/"><b>Be like Bob.</b></a></li>
-    </ol>
-    <a href="mailto:mathiash98@gmail.com?subject=feedback">
+    <main>
+        <h1 id="clock"></h1>
+        <h1>This is a panda</h1>
+        <a href="http://wwf.panda.org/"><img id="pandaImg" src="./img/panda.svg" alt="Panda" /></a>
+        <div class="textbox">
+            <ol>
+                <li>
+                    <p>This panda's name is Bob.</p>
+                </li>
+                <li><i>Bob likes to be happy.</i></li>
+                <li><a href="http://freehugsproject.com/"><b>Be like Bob.</b></a></li>
+            </ol>
+            <a href="mailto:mathiash98@gmail.com?subject=feedback">
       email me if you would like to give me feedback
     </a>
-    <br>
-    <table>
-      <thead>
-        <tr>
-          <th>id</th>
-          <th>name</th>
-        </tr>
-      </thead>
+            <br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>name</th>
+                    </tr>
+                </thead>
 
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Bob</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Bill</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Paul</td>
-        </tr>
-      </tbody>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Bob</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Bill</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Paul</td>
+                    </tr>
+                </tbody>
 
-    </table>
+            </table>
+        </div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wVDQyNzTEDU" frameborder="0" allowfullscreen></iframe>
+    </main>
+</body>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/wVDQyNzTEDU" frameborder="0" allowfullscreen></iframe>
-
-  </body>
 </html>
