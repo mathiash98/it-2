@@ -25,6 +25,10 @@
             return i;
         }
 
+        function changeBackground() {
+          document.body.style.backgroundColor = document.getElementById("background_color").value;
+        }
+
     </script>
 
 </head>
@@ -33,10 +37,15 @@
     <header>
         <a href="./side2.html">Side2</a>
         <a href="./clock.html">Clock</a>
+        <p>Define Background color:
+          <input type="color" id="background_color" name="name" value="#333333">
+          <button type="button" onclick="changeBackground()">Update</button>
+        </p>
+
     </header>
 
     <main>
-        <h1 id="clock"></h1>
+        <h1 id="clock" class="center"></h1>
         <h1>This is a panda</h1>
         <a href="http://wwf.panda.org/"><img id="pandaImg" src="./img/panda.svg" alt="Panda" /></a>
         <div class="textbox">

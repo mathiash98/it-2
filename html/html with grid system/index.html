@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="en">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <title>Template</title>
+
+        <link rel="stylesheet" href="./css/bootstrap.min.css" media="screen">
+        <link rel="stylesheet" href="./css/style.css" media="screen" title="custom css">
+
+        <script type="text/javascript">
+            function startTime() {
+                var time = new Date();
+                var h = time.getHours();
+                var m = time.getMinutes();
+                var s = time.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('clock').innerHTML = h + ':' + m + ':' + s;
+                var t = setTimeout(startTime, 1000);
+            }
+
+            function checkTime(i) {
+                if (i < 10) {
+                    return '0' + i;
+                }
+                return i;
+            }
+        </script>
+
+    </head>
+
+    <body onload="startTime()">
+
+        <nav class="navbar navbar-light bg-faded">
+            <button class="navbar-toggler hidden-md-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+            <div class="collapse navbar-toggleable-sm" id="navbarResponsive">
+                <a class="navbar-brand" href="#">PandaPage</a>
+                <ul class="nav navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./side2.html">Side2</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./clock.html">Clock</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main>
+            <div class="jumbotron">
+                <h1 class="center">Hello and hello!</h1>
+                <h1 id="clock" class="center"></h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi iaculis eros risus, ac placerat sem egestas non. Sed lorem nulla, bibendum nec sapien maximus, sollicitudin hendrerit enim. Vestibulum ante ipsum primis in faucibus orci luctus et
+                    ultrices posuere cubilia Curae; Donec ac dapibus ipsum. Suspendisse nunc velit, vestibulum non ultricies id, imperdiet scelerisque quam. Nunc ut elit sagittis dui accumsan auctor. Suspendisse arcu nisi, molestie vitae lacinia et, vestibulum nec enim.
+                    Sed pretium tellus ac sapien commodo, in luctus elit pretium. Mauris in condimentum felis, vitae malesuada mauris. Ut sed finibus nibh, id rutrum neque. Pellentesque justo leo, aliquet et blandit in, blandit ac augue.
+                </p>
+            </div> <!-- Jombotron -->
+
+
+            <div class="container-fluid" id="text1">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h1 class="center">This is a panda</h1>
+                        <ol>
+                            <li>
+                                <p>This panda's name is Bob.</p>
+                            </li>
+                            <li>
+                                <i>Bob likes to be happy.</i>
+                            </li>
+                            <li>
+                                <a href="http://freehugsproject.com/">
+                                    <b>Be like Bob.</b>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-md-8">
+                        <a href="http://wwf.panda.org/"><img id="pandaImg" src="./img/panda.svg" alt="Panda"/></a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="textbox">
+                        <a href="mailto:mathiash98@gmail.com?subject=feedback">
+                            email me if you would like to give me feedback
+                        </a>
+                        <br>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>name</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Bob</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Bill</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Paul</td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/wVDQyNzTEDU" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </main>
+
+        <script src="./js/jquery-3.1.1.min.js" charset="utf-8"></script>
+        <script src="./js/tether.min.js" charset="utf-8"></script>
+        <script src="./js/bootstrap.min.js" charset="utf-8"></script>
+    </body>
+
+</html>
