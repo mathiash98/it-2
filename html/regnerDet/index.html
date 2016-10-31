@@ -35,7 +35,7 @@
             function regnerDet() {
                 var data = null;
 
-                var xhr = new XMLHttpsRequest();
+                var xhr = new XMLHttpRequest();
                 xhr.withCredentials = true;
 
                 xhr.addEventListener("readystatechange", function() {
@@ -45,7 +45,7 @@
                 });
 
                 xhr.open("GET", "https://www.yr.no/stad/Norge/Hordaland/Bergen/Bergen/varsel_nu.xml");
-                xhr.setRequestHeader("Access-Control-Allow-Origin", "http://www.yr.no");
+                xhr.setRequestHeader("Access-Control-Allow-Origin", "https://www.yr.no");
 
                 xhr.send(data);
             }
