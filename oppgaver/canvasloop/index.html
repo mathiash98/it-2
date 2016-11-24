@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CanvasLoop</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+          body {
+            background-color: lightblue;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+          }
+          canvas {
+            background-color: white;
+          }
+        </style>
+    </head>
+    <body onload="drawCanvas();drawGrid()">
+      <canvas id="canvas" width="600" height="600"></canvas>
+      <br>
+      <canvas id="gridCanvas" width="600" height="600"></canvas>
+      <br>
+      <input type="number" id="graph_fromX" placeholder="fromX">
+      <input type="number" id="graph_fromY" placeholder="fromY">
+      <input type="number" id="graph_toX" placeholder="toX">
+      <input type="number" id="graph_toY" placeholder="toY">
+      <button type="button" onclick="drawLine(graph_fromX,graph_fromY,graph_toX,graph_toY)">Draw line</button>
+    <script src="./canvasLoop.js" charset="utf-8"></script>
+    </body>
+</html>

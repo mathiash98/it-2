@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ticket System</title>
+
+        <link rel="stylesheet" href="./css/material.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+
+    </head>
+    <body onload="writeTable()">
+      <h1>Ticket system bro</h1>
+        <section>
+            <div class="mdl-grid" id="ticketSystem">
+                <div class="mdl-cell cell--6-col">
+                    <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric">Place</th>
+                                <th>Quantity</th>
+                                <th>Unit price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ticketListBody"></tbody>
+                    </table>
+                </div>
+                <div class="mdl-cell cell--6-col">
+
+                    <h6>Number of tickets</h6>
+                    <input class="mdl-slider mdl-js-slider" type="range" min="1" max="20" value="2" tabindex="0" id="ticketsNumSlide" onchange="updateVal(ticketsNumSlide, ticketsNumTxt)">
+                    <div class="mdl-textfield mdl-js-textfield">
+                        <input type="number" class="mdl-textfield__input" pattern="-?[0-9]*(\.[0-9]+)?" id="ticketsNumTxt" placeholder="Number of tickets" value="1" onchange="updateVal(ticketsNumTxt, ticketsNumSlide)">
+
+                    </div>
+                    <button class="mdl-button mdl-js-button mdl-button--raised" onclick="order()">Order</button>
+                </div>
+            </div>
+
+            <!-- mdl-grid -->
+        </section>
+
+        <script src="./js/ticketSystem.js"></script>
+        <script src="./js/material.min.js"></script>
+    </body>
+</html>
