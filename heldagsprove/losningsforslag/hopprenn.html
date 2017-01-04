@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2: Hopprenn</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stilark.css">
+</head>
+<body>
+    <div class="midtstilt">
+         <!-- Meny -->
+        <nav> 
+            <ul>
+                <li>
+                    <a href="index.html">Startside</a>
+                </li>
+                <li>
+                    <a href="koyretoy.html">Oppgåve 1: Køyretøy</a>
+                </li>
+                <li>
+                    <a href="hopprenn.html">Oppgåve 2: Hopprenn</a>
+                </li>
+                <li>
+                    <a href="teikning.html">Oppgåve 3: Teikning</a>
+                </li>
+                <li>
+                    <a href="bottlesofbeer.html">Ekstra: Julebrus</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Oppgåve 2 -->
+        <h1>Hopprenn</h1>
+        <h2 id="h_overskrift"></h2>
+        <p id="p_resultat"></p>
+    </div>
+
+    <!-- Kode -->
+    <script>
+        // Oppgåve 2
+        // Oppsett
+        p_resultat = document.getElementById("p_resultat");
+        h_overskrift = document.getElementById("h_overskrift");
+        var bruker = prompt("Vel møtt. Skriv inn ditt navn.");
+        h_overskrift.innerHTML += "Admin: " + bruker;
+
+        // Lengdepoeng
+        var kPunkt = Number(prompt("Kva er k-punkt i den aktuelle bakken?"));
+        var lengdeHopp = Number(prompt("Kor langt var hoppet?"));
+        var meterverdi = Number(prompt("Kva er meterverdien i den aktuelle bakken?"));
+        var lengdePoeng = 60 + meterverdi * (lengdeHopp - kPunkt);
+        p_resultat.innerHTML = "Hoppet på " + lengdeHopp + " m. gjer ein poengsum på " + lengdePoeng + " poeng.";
+
+        // Karakterar
+        var dommar1 = Number(prompt("Karakter til dommar 1."));
+        var dommar2 = Number(prompt("Karakter til dommar 2."));
+        var dommar3 = Number(prompt("Karakter til dommar 3."));
+        var dommar4 = Number(prompt("Karakter til dommar 4."));
+        var dommar5 = Number(prompt("Karakter til dommar 5."));
+
+        // Plasserer dommarkarakterane inn i tabell og skriv dei ut
+        var tab_dommarKarakterar = [dommar1, dommar2, dommar3, dommar4, dommar5];
+        console.log(tab_dommarKarakterar); // Ein måte å kontrollere noko på, utan at brukaren nødvendigvis ser det; kva er innhaldet i tabellen?
+        p_resultat.innerHTML += "<br>Dommarane sine karakterar er som følger: " + tab_dommarKarakterar + ".";
+
+        // Utrekning av stilpoeng, noko som inkluderer å sortere ein tabell: 
+        tab_dommarKarakterar.sort(function(a, b){return a - b}); // W3Schools: http://www.w3schools.com/js/js_array_sort.asp
+        p_resultat.innerHTML += "<br>Sortert tabell: " + tab_dommarKarakterar + ".";
+        var dommarPoeng = 0;
+        for(var i = 1; i <= tab_dommarKarakterar.length-2; i++) { // Første og siste element skal ikkje tellast med; blir stryke
+            dommarPoeng = dommarPoeng + tab_dommarKarakterar[i];
+        }
+        p_resultat.innerHTML += "<br>Dei tre karakterane som tel (eksl. lågaste og høgaste) gjer samla poengsum for dommarar lik " + dommarPoeng + " poeng.";
+
+        // Total poengsum
+        var totalPoengsum = lengdePoeng + dommarPoeng;
+        p_resultat.innerHTML += "<br>Den totale poengsummen for lengdepoeng (" + lengdePoeng + ") og dommarpoeng (" + dommarPoeng + ") er " + totalPoengsum + " poeng.";  
+    </script>
+</body>
+
+</html>

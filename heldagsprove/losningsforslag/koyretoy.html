@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>1: Køyretøy</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="stilark.css">
+    </head>
+    <body>
+        <div class="midtstilt">
+             <!-- Meny -->
+            <nav> 
+                <ul>
+                    <li>
+                        <a href="index.html">Startside</a>
+                    </li>
+                    <li>
+                        <a href="koyretoy.html">Oppgåve 1: Køyretøy</a>
+                    </li>
+                    <li>
+                        <a href="hopprenn.html">Oppgåve 2: Hopprenn</a>
+                    </li>
+                    <li>
+                        <a href="teikning.html">Oppgåve 3: Teikning</a>
+                    </li>
+                    <li>
+                        <a href="bottlesofbeer.html">Ekstra: Julebrus</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Oppgåve 2 -->
+            <h1>Køyretøy</h1>
+            <h2 id="h_overskrift"></h2>
+            <p id="p_resultat"></p>
+            <!-- Bruk flexbox for å vise fram bileter på ein fin måte, skjul alle bileta som standard -->
+            <img id="imgUlovleg" height="200px">
+            <img id="imgMoped" height="200px">
+            <img id="imgBil" height="200px">
+            <img id="imgBuss" height="200px">
+        </div>
+        <script>
+            // Oppsett
+            var imgUlovleg = document.getElementById("imgUlovleg");
+            var imgMoped = document.getElementById("imgMoped");
+            var imgBil = document.getElementById("imgBil");
+            var imgBuss = document.getElementById("imgBuss");
+
+            // Les inn alderen til brukaren og viser med tekst og bilete kva han/ho får lov til
+            var alder = Number(prompt("Kor gamal er du?"));
+            if(alder<16){
+                imgUlovleg.src = "bilder/baby-skjegg.jpg";
+                p_resultat.innerHTML = "Du er for liten! Bli vaksen!";
+            }
+            else if(alder>=16 && alder < 18) {
+                imgMoped.src = "bilder/moped.png";
+                p_resultat.innerHTML = "Du kan køyre moped.";
+            }
+            else if(alder >= 18 && alder < 21) {
+                imgMoped.src = "bilder/moped.png";
+                imgBil.src = "bilder/bil.jpg";
+                p_resultat.innerHTML = "Du kan køyre moped og bil.";
+            }
+            else if(alder >= 21){
+                imgMoped.src = "bilder/moped.png";
+                imgBil.src = "bilder/bil.jpg";
+                imgBuss.src = "bilder/buss.jpg";
+                p_resultat.innerHTML = "Du kan køyre moped, bil og buss.";
+            }
+            else {
+                p_resultat.innerHTML = "Ugyldig input. Skriv inn eit tal.";
+            }
+        </script>
+    </body>
+</html>

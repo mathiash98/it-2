@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>IT2 Oppgave3</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body onload="documentReady()">
+  <section>
+    <h1>Random plotted ints between 1 and 20</h1>
+    <!-- La no bare til denne ekstra knappen som du fort ser skriver den over alt det gamle og er i grunn ganske dårlig -->
+    <!-- Men den er litt interessant så jeg lot den være med, av en grunn som eg ikke vet blir den gamle teksten grå, litt stilig -->
+    <button onclick="documentReady()">Click for new numbers. Not optimized function but nice to have and watch</button>
+    <br>
+    <br>
+    <table>
+      <tr id="randomNumTableHead">
+        <th></th>
+      </tr>
+      <tr id="randomNumTableBody">
+        <td>Random num</td>
+      </tr>
+    </table>
+    <br>
+    <canvas id="canvas1" width="550" height="500"></canvas>
+    <br>
+    <br>
+    <h2>Ekstra oppgaven</h2>
+    <button onclick="bottlesOfJulebrus(bottlesOfJulebrusText)">Click to show the lyrics</button>
+    <div id="bottlesOfJulebrusText"></div>
+  </section>
+  <script src="./script/script.js" charset="utf-8"></script>
+
+  
+
+</body>
+</html>

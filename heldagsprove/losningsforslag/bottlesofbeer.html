@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ekstra: Bottles of julebrus</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="stilark.css">
+    </head>
+    <body>
+        <div class="midtstilt">
+             <!-- Meny -->
+            <nav> 
+                <ul>
+                    <li>
+                        <a href="index.html">Startside</a>
+                    </li>
+                    <li>
+                        <a href="koyretoy.html">Oppgåve 1: Køyretøy</a>
+                    </li>
+                    <li>
+                        <a href="hopprenn.html">Oppgåve 2: Hopprenn</a>
+                    </li>
+                    <li>
+                        <a href="teikning.html">Oppgåve 3: Teikning</a>
+                    </li>
+                    <li>
+                        <a href="bottlesofbeer.html">Ekstra: Julebrus</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Oppgåve 2 -->
+            <h1>Bottles of julebrus</h1>
+            <p>Sjå og den "knotete" <a href="bottlesofbeer-v2.html">alternative versjonen</a>.</p>
+            <p id="p_resultat"></p>
+        </div> <!-- Avsluttar midtstilt -->
+
+        <script>
+            // NB: Koden under er ikkje nødvendigvis optimal, det utarta seg etterkvart til ein konkurranse i å gjere det mest mogleg
+            // omstendeleg, eller "knotete" om du vil. Det viktigaste å vise er kontroll på løkker.
+            var bottles = " bottles of julebrus";
+            var wall = " on the wall";
+            var down = "Take one down and pass it around, ";
+            var p_resultat = document.getElementById("p_resultat");
+            for(var i=99;i>=1;i--){
+                if(i===1){
+                    // Forsøkte meg med replace-funksjonen. Får du det til? 
+                    // bottles.replace(/s/g, "");
+                    // p_resultat.innerHTML += "<p>" + i + bottles + wall + ", " + i + bottles + ".<br>" + down + (i-1) + bottles + wall + ".</p>";
+                    p_resultat.innerHTML += "1 bottle of julebrus on the wall, 1 bottle of julebrus. <br>Take one down and pass it around, no more bottles of julebrus on the wall.";
+                }
+                else if(i===0){
+                    p_resultat.innerHTML += "No more bottles of julebrus on the wall, no more bottles of julebrus. <br>Go to the store and buy some more, 99 bottles of julebrus on the wall.";
+                }
+                else{
+                    p_resultat.innerHTML += "<p>" + i + bottles + wall + ", " + i + bottles + ".<br>" + down + (i-1) + bottles + wall + ".</p>";
+                }
+            }
+        </script>
+    </body>
+</html>

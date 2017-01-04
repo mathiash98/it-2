@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Beersong</title>   
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+   <style>
+       body{
+           background-color: darkmagenta;
+           color: greenyellow;
+           font-family: 'Roboto Condensed', sans-serif;
+           font-size: 1.2em;
+           margin-left: 20px;
+       }
+       
+   </style>
+ </head>
+ <body>
+   <div id="result"></div>
+     <script type='text/javascript'>          
+       document.getElementById("result").innerHTML= SingTheMostIrritatingSongInTheWorld(99, "julebrus");
+                   
+       function SingTheMostIrritatingSongInTheWorld(iterations, content) {
+           var text = "";
+           var current = iterations;
+           
+           while(current>=0) {                                
+               text += printText(current--, content, iterations);
+           }
+                       
+           return text;
+       }
+
+       function printText(current, content, start) {
+           var text = "";
+           
+           text += (current > 0 ? current : "No more") + " bottle" + (current != 1 ? "s":"") + " of " + content + " on the wall<br>";
+           text += (current > 0 ? current : "No more") + " bottle" + (current != 1 ? "s":"") + " of " + content + "<br>";
+           
+           if(current == 0){
+               text += "Go to the store and buy some more<br>";
+               text += start + " bottle" + (start > 1 ? "s":"") +  " of " + content + " on the wall<p>"
+           }
+           else{
+               text += "Take one down and pass it around<br>";
+               text += (current-1>0 ? current-1 : "No more") + " bottle" + (current != 2 ? "s":"") +  " of " + content + " on the wall<p>"; 
+           }
+
+           return text;
+       }
+   </script>
+ </body>
+</html>

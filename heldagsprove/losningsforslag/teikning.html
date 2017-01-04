@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3: Teikning i canvas</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stilark.css">
+</head>
+<body>
+    <div class="midtstilt">
+        <!-- Meny -->
+        <nav> 
+            <ul>
+                <li>
+                    <a href="index.html">Startside</a>
+                </li>
+                <li>
+                    <a href="koyretoy.html">Oppgåve 1: Køyretøy</a>
+                </li>
+                <li>
+                    <a href="hopprenn.html">Oppgåve 2: Hopprenn</a>
+                </li>
+                <li>
+                    <a href="teikning.html">Oppgåve 3: Teikning</a>
+                </li>
+                <li>
+                    <a href="bottlesofbeer.html">Ekstra: Julebrus</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Oppgåve 3 -->
+        <main>
+            <h1>Teikning i canvas</h1>
+            <p id="p_teikning"></p>
+            <canvas width="600" height="440" id="canvas"></canvas>
+        </main>
+    </div> <!-- Avsluttar midtstilt -->
+
+    <!-- Kode -->
+    <script>
+        // Oppgåve 3
+        // Opprettar ein tabell og fyller inn med tilfeldige tal mellom 1 og 20.
+        var tab_RandomDommarKarakterar = [0,0,0,0,0];
+        for(var i = 0; i <= tab_RandomDommarKarakterar.length-1; i++) {
+            tab_RandomDommarKarakterar[i] = Math.floor(Math.random()*20)+1; // Utfordring: Bruk funksjon her!
+            console.log(tab_RandomDommarKarakterar[i]);
+        }
+        console.log(tab_RandomDommarKarakterar);
+        var p_teikning = document.getElementById("p_teikning");
+        p_teikning.innerHTML = "Innhaldet i den tilfeldig genererte tabellen er " + tab_RandomDommarKarakterar + ".";
+
+        // Oppsett
+        var canvas = document.getElementById("canvas");
+        
+        // Teiknar til canvas, basert på data frå tabellen over
+        var ctx = canvas.getContext("2d");
+        ctx.stroke();
+        ctx.strokeStyle ="red";
+        ctx.lineWidth= 5;
+        var konstant = 20; // For å halde oss innanfor området
+        ctx.moveTo(100, tab_RandomDommarKarakterar[0]*konstant);
+        ctx.lineTo(200, tab_RandomDommarKarakterar[1]*konstant);
+        ctx.lineTo(300, tab_RandomDommarKarakterar[2]*konstant);
+        ctx.lineTo(400, tab_RandomDommarKarakterar[3]*konstant);
+        ctx.lineTo(500, tab_RandomDommarKarakterar[4]*konstant);
+        ctx.stroke();
+
+        // Rutenett, utsjånad
+        ctx.lineWidth = 1;
+        ctx.strokeStyle = "black";
+        // Horisontale linjer
+        for(var i = 10; i <= 440; i = i+10) {
+            ctx.moveTo(0, i);
+            ctx.lineTo(600, i);
+        }
+        // Vertikale linjer
+        for(var i = 0; i <= 600; i = i+10){
+            ctx.moveTo(i, 0);
+            ctx.lineTo(i, 440);
+        }
+        ctx.stroke();
+       
+        // Utfordring: Kan du fikse på løysninga over slik at den ikkje benyttar seg av absolutte tal frå bredde og høgde? 
+    </script>
+</body>
+
+</html>
