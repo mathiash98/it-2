@@ -1,0 +1,36 @@
+body {
+  padding: 0;
+  background-color: #999
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  padding: 10px;
+  margin: auto;
+  min-height: 600px;
+  max-width: 1000px;
+  background-color: #eee;
+}
+.container-fluid {
+  background-color: pink;
+  min-height: 200px;
+  margin: 20px;
+}
+
+#section_game {
+  text-align: center;
+  min-height: 250px;
+  padding: 10px;
+}
+
+#section_results {
+  text-align: center;
+  padding: 10px;
+}
+
+img:hover {
+  border: 1px solid black;
+}

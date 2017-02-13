@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TabellKalkulasjon</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+    <div class="container" id="container1">
+      <table class="table">
+        <thead>
+          <td>Tall</td>
+        </thead>
+        <tbody id="tableBody">
+
+        </tbody>
+      </table>
+    </div>
+
+    <div class="container" id="container2">
+      Find how often a number shows
+      <!-- <form onsubmit="f_numOccurences(Number(in_numberSearch.value))"> -->
+      <form id="searchForm">
+        <input type="number" name="formInt" autofocus>
+        <button type="submit">Search for int</button>
+      </form>
+      <textarea id="textResultBox" rows="8" cols="80" value=""></textarea>
+    </div>
+
+    <script src="./script.js" charset="utf-8"></script>
+  </body>
+</html>

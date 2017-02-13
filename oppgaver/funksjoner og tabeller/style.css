@@ -1,0 +1,19 @@
+table {
+
+}
+td {
+  border: black solid 1px;
+  min-width: 30px;
+}
+
+.container {
+  padding: 1vw;
+  margin: 1vw;
+  background: lightblue;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  margin 0;
+}
