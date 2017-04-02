@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Snøvarsel</title>
+    <meta name="description" content="Snøskredvarsel der du bor!">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div class="container text-center">
+      <h1>Snøskred</h1>
+      <p>Hvert år er over 100 personer med i snøskred og flere av de dør. 2015-16 sesongen døde 5 personer. Unngå å bli tatt av skred, les skredvarsel.</p>
+      <video src="../oppgave1/Master-1080p.mp4" controls poster="./assets/snøskred.jpg"></video>
+      <div class="divider-20"></div>
+    </div>
+    <div class="divider-20"></div>
+    <div class="container" id="VarselContainer">
+      <h1 class="text-center">Varsel</h1>
+
+      <!-- TODO: Legg til mulighet for å filtrere og sortere tabellen -->
+
+      <form id="formLeggTilVarsel" class="text-center">
+        <input required type="text" name="sted" value="" placeholder="Navn på sted">
+        <input required type="text" name="fylke" value="" placeholder="Fylke">
+        <input type="text" name="kommentar" value="" placeholder="Kommentar">
+        <label for="skredfare">Skredfare fra 0 til 4: </label><input required type="number" name="skredfare" value="" placeholder="skredfare" min="0" max="4" oninput="skredFareInput(this)">
+        <button type="submit" name="button" class="btnLagre">Lagre</button>
+      </form>
+      <div id="formLeggTilVarselTilbakemelding"></div>
+      <div class="divider-20"></div>
+
+      <form id="filtrerTableSkredfare">
+        <label for="skredfare">Filtrer basert på skredfare 0-4: </label>
+        <select name="comparer">
+          <option value="==">Lik</option>
+          <option value="<">Mer enn</option>
+          <option value=">">Mindre en</option>
+        </select>
+        <input type="number" name="skredfare" min="0" max="4" value="" placeholder="Skredfare">
+        <button type="submit" name="button" class="btnLagre">Filtrer</button>
+      </form>
+      <div class="divider-20"></div>
+
+      <div class="divider-20"></div>
+
+      <table>
+        <thead>
+          <th>Sted</th>
+          <th>Fylke</th>
+          <th>Kommentar</th>
+          <th>Varsel</th>
+          <th>Endre varsel</th>
+        </thead>
+        <tbody id="tableVarselBody">
+
+        </tbody>
+      </table>
+    </div>
+
+    <div class="divider-20"></div>
+
+    <div class="container text-center" id="statistikkContainer">
+      <h2>Statistikk</h2>
+      <div id="statistikkBody">
+        <div id="statistikkSoyle_0" class="statistikkSoyle skredFareFarge_0"></div>
+        <div id="statistikkSoyle_1" class="statistikkSoyle skredFareFarge_1"></div>
+        <div id="statistikkSoyle_2" class="statistikkSoyle skredFareFarge_2"></div>
+        <div id="statistikkSoyle_3" class="statistikkSoyle skredFareFarge_3"></div>
+        <div id="statistikkSoyle_4" class="statistikkSoyle skredFareFarge_4"></div>
+
+      </div>
+    </div>
+    <div class="divider-20"></div>
+    <div class="divider-20"></div>
+
+    <script src="./script.js" charset="utf-8"></script>
+  </body>
+</html>

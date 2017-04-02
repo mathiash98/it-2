@@ -1,0 +1,29 @@
+body {
+  background-color: lightgrey;
+}
+
+section {
+  background-color: lightblue;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 2vh;
+  padding: 10px;
+  text-align: center;
+}
+
+.imgBox {
+  position: relative;
+  width: 500px;
+  margin: auto;
+}
+.imgBox img{
+  width: 100%;
+}
+.imgBox p {
+  font-family: 'Great Vibes', cursive;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  font-size: 40px;
+}

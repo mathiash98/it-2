@@ -67,7 +67,7 @@ function f_newGameInfo(evt, el) {
 // Genererer tilfedig posisjon til mynten mellom 0 og antall cups
 // 0 = kopp nummer 1
 function f_randomCoinPos() {
-  return Math.floor((Math.random() * (config.numCups)) + 1)-1;
+  return Math.floor((Math.random() * config.numCups ));
 }
 
 // Check if correct cup, and do the rest of the game mechanics
